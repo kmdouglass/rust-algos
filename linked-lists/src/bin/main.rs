@@ -6,6 +6,11 @@ fn main() {
     log.append("b".to_string());
 
     assert_eq!(2, log.length);
+    println!("The list length is: {}", log.length);
 
-    println!("The lists length is: {}", log.length);
+    assert_eq!("a", log.pop().unwrap());
+    assert_eq!("b", log.pop().unwrap());
+
+    assert_eq!(0, log.length);
+    println!("The list length is: {}", log.length);
 }
